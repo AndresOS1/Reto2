@@ -41,7 +41,6 @@ Route::get('/logout',[LoginController::class,'logout'])->name('cerrarsesion');
 
 // Casos
 Route::group(['middleware' => ['role:Abogado']], function () {
-    Route::get('/caso.index',[CasoController::class,'index'])->name('caso.index');
     
     Route::get('/editarcaso/{id}',[CasoController::class,'edit'])->name('editarcaso');
     Route::put('/actualizarcaso/{id}',[CasoController::class,'update'])->name('actualizarcaso');
@@ -55,6 +54,8 @@ Route::group(['middleware' => ['role:Abogado']], function () {
         
         Route::get('/caso.create',[CasoController::class,'create'])->name('caso.create');
         Route::post('/caso.store',[CasoController::class,'store'])->name('caso.store');
+    Route::get('/caso.index',[CasoController::class,'index'])->name('caso.index');
+
     });
 
 

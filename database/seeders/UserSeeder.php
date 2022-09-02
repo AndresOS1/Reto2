@@ -31,5 +31,19 @@ class UserSeeder extends Seeder
             'email' => 'valeria@gmail.com',
             'password' => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', // password
         ])->assignRole('Abogado');
+
+        User::create([
+            'name' => 'Andres Ordoñez',
+            'especialidad' => 'Derecho Laboral',
+            'email' => 'andres@gmail.com',
+            'password' => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', // password
+        ])->assignRole('Cliente');
+
+        User::create([
+            'name' => 'Yonda Conda',
+            'especialidad' => 'Derecho Penal',
+            'email' => 'yonda@gmail.com',
+            'password' => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', // password
+        ])->assignRole('Cliente');
     }
 }

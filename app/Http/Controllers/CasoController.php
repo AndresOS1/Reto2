@@ -26,6 +26,8 @@ class CasoController extends Controller
         $busqueda=$request->buscar;
         $casos = Caso::where('descripcion_caso','like','%'.$busqueda.'%')
         ->paginate(7);
+
+        
         $instancias = Instancia::all();
         $ramas = RamaDerecho::all();
 
