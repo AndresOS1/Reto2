@@ -19,10 +19,7 @@
                            </div>
                            <div clas s="w-100 justify-content-center d-flex mt-2"> 
                                <select name="instancia_id" id="" requided class="form-select mt-2">
-                                    <option value="" selected>ingrese su instancia</option>
-                                    @foreach ($instancias as $i)
-                                       <option value="{{$i->id_instancia}}">{{$i->estado}}</option>
-                                    @endforeach
+                                    <option value="1" selected>Por Procesar</option>
                                </select>
                            </div>
 
