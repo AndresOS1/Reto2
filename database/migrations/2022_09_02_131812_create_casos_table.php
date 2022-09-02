@@ -18,9 +18,12 @@ return new class extends Migration
             $table->string('descripcion_caso');
 
             $table->unsignedBigInteger('instancia_id');
+            $table->unsignedBigInteger('rama_id'); 
 
 
             $table->foreign('instancia_id')->references('id_instancia')->on('instancia');
+            $table->foreign('rama_id')->references('id_rama')->on('rama_derechos');
+
             $table->timestamps();
         });
     }

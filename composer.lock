@@ -4,7 +4,11 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
+<<<<<<< HEAD
+    "content-hash": "8f0f871362c2bbf7ae70beaa9bc7067f",
+=======
     "content-hash": "a970e0a233fa835125ad0175e625b4e1",
+>>>>>>> 2ad25ac1340ab4fc82062571a1a4d7f2cf56168c
     "packages": [
         {
             "name": "brick/math",
@@ -2829,6 +2833,32 @@
             "time": "2022-08-05T17:58:37+00:00"
         },
         {
+<<<<<<< HEAD
+            "name": "spatie/laravel-permission",
+            "version": "5.5.5",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/spatie/laravel-permission.git",
+                "reference": "f2303a70be60919811ca8afc313e8244fda00974"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/spatie/laravel-permission/zipball/f2303a70be60919811ca8afc313e8244fda00974",
+                "reference": "f2303a70be60919811ca8afc313e8244fda00974",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/auth": "^7.0|^8.0|^9.0",
+                "illuminate/container": "^7.0|^8.0|^9.0",
+                "illuminate/contracts": "^7.0|^8.0|^9.0",
+                "illuminate/database": "^7.0|^8.0|^9.0",
+                "php": "^7.3|^8.0|^8.1"
+            },
+            "require-dev": {
+                "orchestra/testbench": "^5.0|^6.0|^7.0",
+                "phpunit/phpunit": "^9.4",
+                "predis/predis": "^1.1"
+=======
             "name": "realrashid/sweet-alert",
             "version": "v5.1.0",
             "source": {
@@ -2848,24 +2878,41 @@
             },
             "require-dev": {
                 "symfony/thanks": "^1.0"
+>>>>>>> 2ad25ac1340ab4fc82062571a1a4d7f2cf56168c
             },
             "type": "library",
             "extra": {
                 "laravel": {
                     "providers": [
+<<<<<<< HEAD
+                        "Spatie\\Permission\\PermissionServiceProvider"
+                    ]
+                },
+                "branch-alias": {
+                    "dev-main": "5.x-dev",
+                    "dev-master": "5.x-dev"
+=======
                         "RealRashid\\SweetAlert\\SweetAlertServiceProvider"
                     ],
                     "aliases": {
                         "Alert": "RealRashid\\SweetAlert\\Facades\\Alert"
                     }
+>>>>>>> 2ad25ac1340ab4fc82062571a1a4d7f2cf56168c
                 }
             },
             "autoload": {
                 "files": [
+<<<<<<< HEAD
+                    "src/helpers.php"
+                ],
+                "psr-4": {
+                    "Spatie\\Permission\\": "src"
+=======
                     "src/functions.php"
                 ],
                 "psr-4": {
                     "RealRashid\\SweetAlert\\": "src/"
+>>>>>>> 2ad25ac1340ab4fc82062571a1a4d7f2cf56168c
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -2874,6 +2921,37 @@
             ],
             "authors": [
                 {
+<<<<<<< HEAD
+                    "name": "Freek Van der Herten",
+                    "email": "freek@spatie.be",
+                    "homepage": "https://spatie.be",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Permission handling for Laravel 6.0 and up",
+            "homepage": "https://github.com/spatie/laravel-permission",
+            "keywords": [
+                "acl",
+                "laravel",
+                "permission",
+                "permissions",
+                "rbac",
+                "roles",
+                "security",
+                "spatie"
+            ],
+            "support": {
+                "issues": "https://github.com/spatie/laravel-permission/issues",
+                "source": "https://github.com/spatie/laravel-permission/tree/5.5.5"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/spatie",
+                    "type": "github"
+                }
+            ],
+            "time": "2022-06-29T23:11:42+00:00"
+=======
                     "name": "Rashid Ali",
                     "email": "realrashid05@gmail.com",
                     "homepage": "https://realrashid.com",
@@ -2917,6 +2995,7 @@
                 }
             ],
             "time": "2022-05-28T13:28:03+00:00"
+>>>>>>> 2ad25ac1340ab4fc82062571a1a4d7f2cf56168c
         },
         {
             "name": "symfony/console",

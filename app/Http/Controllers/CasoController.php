@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Caso;
 use App\Models\Instancia;
+use App\Models\RamaDerecho;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 use RealRashid\SweetAlert\Facades\Alert;
@@ -23,8 +24,9 @@ class CasoController extends Controller
         $casos = Caso::where('descripcion_caso','like','%'.$busqueda.'%')
         ->paginate(7);
         $instancias = Instancia::all();
+        $ramas = RamaDerecho::all();
 
-        return view('caso.index', compact('casos','instancias'));
+        return view('caso.index', compact('casos','instancias', 'ramas'));
     }
 
     /**
@@ -35,6 +37,7 @@ class CasoController extends Controller
     public function create()
     {
         $instancias = Instancia::all();
+        $ramas = RamaDerecho::all();
 
         return view('caso.create',compact('instancias'));
     }
@@ -51,6 +54,8 @@ class CasoController extends Controller
 
                     'descripcion_caso'   => 'required',
                     'instancia_id'       => 'required',
+                    'rama_id'       => 'required',
+
         ]);
 
         if(!$validator->fails()){
@@ -58,6 +63,8 @@ class CasoController extends Controller
             $Caso = new Caso;
             $Caso->descripcion_caso = $request->descripcion_caso;
             $Caso->instancia_id = $request->instancia_id;
+            $Caso->rama_id = $request->rama_id;
+
             $Caso->save();
             if($Caso){
                 Alert::success('Caso creado correctamente');
@@ -98,9 +105,11 @@ class CasoController extends Controller
 
         $caso = Caso::find($id);
         $instancias = Instancia::all();
+        $ramas = RamaDerecho::all();
 
 
-        return view('caso.edit', compact('caso', 'instancias'));
+
+        return view('caso.edit', compact('caso', 'instancias','ramas'));
     }
 
     /**
@@ -116,6 +125,8 @@ class CasoController extends Controller
 
                     'descripcion_caso'   => 'required',
                     'instancia_id'       => 'required',
+                    'rama_id'            => 'required',
+
         ]);
 
         if(!$validator->fails()){
@@ -123,6 +134,7 @@ class CasoController extends Controller
             $Caso = Caso::find($id);
             $Caso->descripcion_caso = $request->descripcion_caso;
             $Caso->instancia_id = $request->instancia_id;
+            $Caso->rama_id = $request->rama_id;
             $Caso->save();
             if($Caso){
                 Alert::success('Caso Actualizado correctamente');
