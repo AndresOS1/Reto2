@@ -11,7 +11,7 @@
 
                            <div clas s="w-100 justify-content-center d-flex"> 
                                 <label for="exampleFormControlTextarea1" class="form-label">ingrese la descripcion de su caso:</label>
-                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="descripcion_caso"></textarea>
                            </div>
                            <div clas s="w-100 justify-content-center d-flex mt-2"> 
                                <select name="instancia_id" id="" requided class="form-select mt-2">

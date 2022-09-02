@@ -15,10 +15,14 @@
                              <tbody>
                                 <tr>
                                     @foreach($casos->c)
-                                        <th scope="row">{{$c->descripcion}}</th>
-                                        <td>Mark</td>
-                                        <td>Otto</td>
-                                        <td>@mdo</td>
+                                        <th scope="row">{{$c->descripcion_caso}}</th>
+                                        <td>{{$c->descripcion_caso}}</td>
+                                        <td>{{$c->instancia_id}}</td>
+                                        <td><a href="" class="btn bi bi-pencil"></a></td>
+                                        <form action="" method="POst">
+                                            @method('DELETE')
+                                            <button class="btn btn-dark"></button>
+                                        </form>
                                     @endforeach
                                 </tr>                              
                              </tbody>
