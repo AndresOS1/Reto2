@@ -20,7 +20,7 @@
                             <h3 class="text-white" style="font-size: 2vw;">Abogados LA LEY</h3>
                       </div>
                       <div class="w-100 d-flex justify-content-center aligin-items-center">
-                             <a href="{{route('caso.index')}}" class="nav-link text-white btn w-100">Caso</a>
+                             <a href="{{route('caso.create')}}" class="nav-link text-white btn w-100"><i class="bi bi-briefcase-fill"></i> Caso</a>
                       </div>
                       @can('rama.index')
                       <div class="w-100 d-flex justify-content-center aligin-items-center">
