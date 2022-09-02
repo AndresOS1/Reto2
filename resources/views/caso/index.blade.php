@@ -27,6 +27,8 @@
                                 </tr>                              
                              </tbody>
                       </table>
+                      
+                      {{$casos->links()}}
              </div>
         </div>
 @endsection
