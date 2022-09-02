@@ -32,8 +32,8 @@
         {{-- section bodt --}}
         <div class="col-md-10 col-12 d-flex flex-wrap" style="height:100vh;">
                   <div class="col-12 d-flex flex-row justify-content-end gap-3">
-                      <p>{{Auth()->user()->name}}</p>
-                      <i class="bi bi-person-circle"></i>
+                      <p class="d-flex mt-2">{{Auth()->user()->name}}</p>
+                      <a class="bi bi-door-open-fill fs-3" href="{{route('cerrarsesion')}}"></a>                     
                   </div>
                    @yield('content')
         </div>

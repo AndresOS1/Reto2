@@ -22,10 +22,10 @@ use App\Http\Controllers\HomeController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return redirect()->route('verLogin');
 });
 
-Route::get('/Home',[RegisterController::class,'index']);
+Route::get('/home',[HomeController::class,'index'])->name('home');
 
 
 //Registro
