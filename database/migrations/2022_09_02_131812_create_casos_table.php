@@ -19,10 +19,15 @@ return new class extends Migration
 
             $table->unsignedBigInteger('instancia_id');
             $table->unsignedBigInteger('rama_id'); 
+            $table->unsignedBigInteger('user_id'); 
+
 
 
             $table->foreign('instancia_id')->references('id_instancia')->on('instancia');
             $table->foreign('rama_id')->references('id_rama')->on('rama_derechos');
+            $table->foreign('user_id')->references('id')->on('users');
+            
+            
 
             $table->timestamps();
         });
