@@ -5,9 +5,12 @@ namespace App\Http\Controllers;
 use App\Models\Caso;
 use App\Models\Instancia;
 use App\Models\RamaDerecho;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 use RealRashid\SweetAlert\Facades\Alert;
+use Auth;
+
 use paginator;
 
 class CasoController extends Controller
@@ -63,6 +66,7 @@ class CasoController extends Controller
             $Caso = new Caso;
             $Caso->descripcion_caso = $request->descripcion_caso;
             $Caso->instancia_id = $request->instancia_id;
+            $Caso->user_id = Auth()->user()->id;
             $Caso->rama_id = $request->rama_id;
 
             $Caso->save();
