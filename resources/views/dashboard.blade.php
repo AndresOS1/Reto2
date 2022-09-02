@@ -30,7 +30,11 @@
         </div>
 
         {{-- section bodt --}}
-        <div class="col-md-10 col-12 " style="height:100vh;">
+        <div class="col-md-10 col-12 d-flex flex-wrap" style="height:100vh;">
+                  <div class="col-12 d-flex flex-row justify-content-end gap-3">
+                      <p>{{Auth()->user()->name}}</p>
+                      <i class="bi bi-person-circle"></i>
+                  </div>
                    @yield('content')
         </div>
      </div>

@@ -31,7 +31,7 @@ class LoginController extends Controller
                 $token=$user->createToken('auth_token')->plainTextToken;
                     if(Auth::attempt($credenciales)){
                             Alert::success('Inicio de Sesión Exitoso');
-                            return redirect()->route('?', compact('user'));
+                            return redirect()->route('/Home', compact('user'));
                     }else{
                     return  redirect()->route('verLogin');
                     }
