@@ -17,9 +17,12 @@ class CasoController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        $casos = Caso::paginate(5);
+        // $casos = Caso::paginate(5);
+        $busqueda=$request->buscar;
+        $casos = Caso::where('descripcion_caso','like','%'.$busqueda.'%')
+        ->paginate(7);
         $instancias = Instancia::all();
         $ramas = RamaDerecho::all();
 
@@ -36,7 +39,7 @@ class CasoController extends Controller
         $instancias = Instancia::all();
         $ramas = RamaDerecho::all();
 
-        return view('caso.create',compact('instancia','ramas'));
+        return view('caso.create',compact('instancias'));
     }
 
     /**

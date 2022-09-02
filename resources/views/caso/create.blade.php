@@ -1,9 +1,12 @@
 @extends('dashboard')
 @section('content')
-    
-   <div class="w-100 d-flex justify-content-center h-100 aligin-items-center">
-               <div class="col-4  d-flex justify-content-center rounded-5 border p-3 shadow-lg  h-50">
-                       <form action="" method="post">
+@include('sweetalert::alert')   
+   <div class="w-100 d-flex justify-content-center h-100 aligin-items-center  pt-5 mt-6">
+    <div clas s="w-100 justify-content-center d-flex"> 
+        <a href="" class="btn bi bi-arrow fs-3"></i></a>
+    </div> 
+               <div class="col-md-4 col-12 d-flex justify-content-center rounded-5 border p-3 shadow-lg  h-75">
+                       <form action="{{route('caso.store')}}" method="post" class="">
                            @csrf
                            <div class="w-100 justify-content-center d-flex">
                                 <h1>ingresar un caso</h1>
@@ -16,9 +19,9 @@
                            <div clas s="w-100 justify-content-center d-flex mt-2"> 
                                <select name="instancia_id" id="" requided class="form-select mt-2">
                                     <option value="" selected>ingrese su instancia</option>
-                                    {{-- @foreach ($instancias as $i)
-                                       <option value="{{$i->id_instancia}}">{{$i->estasdo}}</option>
-                                    @endforeach --}}
+                                    @foreach ($instancias as $i)
+                                       <option value="{{$i->id_instancia}}">{{$i->estado}}</option>
+                                    @endforeach
                                </select>
                            </div>
                            <div clas s="w-100 justify-content-center d-flex mt-2"> 
