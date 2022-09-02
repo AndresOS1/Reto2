@@ -22,6 +22,6 @@ class DatabaseSeeder extends Seeder
         // ]);
         $this->call(InstanciaSeeder::class);
         $this->call(RolSeeder::class);
-
+        $this->call(RamaSeeder::class);
     }
 }
