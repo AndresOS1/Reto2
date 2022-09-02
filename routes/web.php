@@ -47,7 +47,7 @@ Route::delete('/eliminarcaso/{id}',[CasoController::class,'destroy'])->name('eli
 // Ramas 
 Route::get('/rama.index',[RamaDerechoController::class,'index'])->name('rama.index');
 Route::get('/rama.create',[RamaDerechoController::class,'create'])->name('rama.create');
-Route::post('/rama.store',[RamaDerechoController::class,'store'])->name('caso.store');
+Route::post('/rama.store',[RamaDerechoController::class,'store'])->name('rama.store');
 Route::get('/editarrama/{id}',[RamaDerechoController::class,'edit'])->name('editarrama');
 Route::put('/actualizarrama/{id}',[RamaDerechoController::class,'update'])->name('actualizarrama');
 Route::delete('/eliminarrama/{id}',[RamaDerechoController::class,'destroy'])->name('eliminarrama');
