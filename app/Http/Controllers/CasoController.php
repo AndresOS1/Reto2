@@ -39,7 +39,7 @@ class CasoController extends Controller
         $instancias = Instancia::all();
         $ramas = RamaDerecho::all();
 
-        return view('caso.create',compact('instancias'));
+        return view('caso.create',compact('instancias','ramas'));
     }
 
     /**

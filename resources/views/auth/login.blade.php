@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Register</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+  </head>
+  <body>
+    <div class="col-12d-flex justify-content-center " style="height: 100vh;">
+           <div class="card col-6 p-5 m-auto mt-4">
+                <form action="{{route('login')}}" method="POST">
+                  @csrf
+                  <div class="w-100 justify-content-center d-flex text-info">
+                    <h1>Login</h1>
+                  </div>
+                    <div clas s="w-100 justify-content-center d-flex"> 
+                        <label for="exampleFormControlTextarea1" class="form-label">ingrese su correo:</label>
+                        <input class="form-control" id="exampleFormControlTextarea1" rows="3" name="email">
+                   </div>
+
+                   <div clas s="w-100 justify-content-center d-flex"> 
+                    <label for="exampleFormControlTextarea1" class="form-label">ingrese su contraseña:</label>
+                    <input class="form-control" id="exampleFormControlTextarea1" rows="3" name="password">
+                  </div>
+
+                  <div clas s="w-100 justify-content-center d-flex mt-2"> 
+                    <button class="btn btn-info w-100 rounded-5 mt-4">Enviar</button>
+                  </div>
+                </form>
+           </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+  </body>
+</html>

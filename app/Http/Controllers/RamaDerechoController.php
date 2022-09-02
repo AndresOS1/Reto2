@@ -15,10 +15,12 @@ class RamaDerechoController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        $ramas = RamaDerecho::paginate(5);
-
+        // $ramas = RamaDerecho::paginate(5);
+        $busqueda=$request->buscar;
+        $ramas = RamaDerecho::where('nombre_rama','like','%'.$busqueda.'%')
+        ->paginate(7);
         return view('rama.index',compact('ramas'));
     }
 
