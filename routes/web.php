@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CasoController;
+use App\Http\Controllers\RegisterController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -18,6 +20,13 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+
+Route::get('/verRegister',[RegisterController::class,'verRegister'])->name('verRegister');
+Route::post('/register',[RegisterController::class,'register'])->name('register');
+
+Route::get('/verLogin',[LoginController::class,'verLogin'])->name('verLogin');
+Route::post('login',[LoginController::class,'login'])->name('login');
+Route::get('/logout',[LoginController::class,'logout'])->name('cerrarsesion');
 
 Route::get('/caso.index',[CasoController::class,'index'])->name('caso.index');
 Route::get('/caso.create',[CasoController::class,'create'])->name('caso.create');
