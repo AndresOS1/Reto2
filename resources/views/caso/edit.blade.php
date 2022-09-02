@@ -5,7 +5,7 @@
     <div clas s="w-100 justify-content-center d-flex"> 
         <a href="{{route('caso.index')}}" class="btn bi bi-arrow fs-3"><i class="bi bi-arrow-bar-left"></i></a>
     </div> 
-               <div class="col-4  d-flex justify-content-center rounded-5 border p-3 shadow-lg  h-75">
+               <div class="col-4  d-flex justify-content-center rounded-5 border p-3 shadow-lg bg-white  h-75">
 
                        <form action="{{route('actualizarcaso',$caso->id_caso)}}" method="post">
                            @method('PUT')
