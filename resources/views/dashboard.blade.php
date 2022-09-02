@@ -22,6 +22,9 @@
                       <div class="w-100 d-flex justify-content-center aligin-items-center">
                              <a href="{{route('caso.index')}}" class="nav-link text-white btn w-100">Caso</a>
                       </div>
+                      <div class="w-100 d-flex justify-content-center aligin-items-center">
+                        <a href="{{route('rama.index')}}" class="nav-link text-white btn w-100">rama</a>
+                 </div>
 
                  </NAV>
         </div>

@@ -24,6 +24,16 @@
                                     @endforeach
                                </select>
                            </div>
+
+                           <div clas s="w-100 justify-content-center d-flex mt-2"> 
+                             <select  id="" requided class="form-select mt-2" name="rama_id">
+                                 <option value="" selected>seleccione su rama</option>
+                                 @foreach ($ramas as $r)
+                                    <option value="{{$r->id_rama}}">{{$r->nombre_rama}}</option>
+                                 @endforeach
+                             </select>
+                           </div>
+
                            <div clas s="w-100 justify-content-center d-flex mt-2"> 
                                <button class="btn btn-dark w-100 rounded-5 mt-4">Enviar</button>
                            </div>

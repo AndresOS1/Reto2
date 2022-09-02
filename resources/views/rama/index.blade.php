@@ -28,9 +28,9 @@
                                      
                                     <th scope="row">{{$r->id_rama}}</th>
                                         <td>{{$r->nombre_rama}}</td>
-                                        <td><a href="{{route('editarcaso',$r->id_rama)}}" class="btn bi bi-pencil text-info"></a></td>
+                                        <td><a href="{{route('editarrama',$r->id_rama)}}" class="btn bi bi-pencil text-info"></a></td>
                                         <td>
-                                                <form action="{{route('eliminarcaso',$r->id_rama)}}" method="Post">
+                                                <form action="{{route('eliminarrama',$r->id_rama)}}" method="Post">
                                                     @method('DELETE')
                                                     @csrf
                                                     <button class="btn btn-info bi-trash"></button>
