@@ -12,7 +12,7 @@
      <div class="col-12 d-flex flex-wrap">
         {{-- ///nav DAShboard --}}
         <div class="col-md-2 col-12">
-                 <NAV class="w-100 border shadow-lg rounded-5 h-100 bg-dark d-flex flex-column pt-3 ">
+                 <NAV class="w-100 border shadow-lg  h-100 bg-dark d-flex flex-column pt-3 ">
                       <div class="w-100 d-flex img-fluid text-white justify-content-center">
                         {{-- <i class="bi bi-briefcase-fill" style="font-size:6vw;"></i> --}}
                         <img src="img/svg.webp" alt="" width="200vw" class="m-auto d-flex justify-content-center aligin-items-center">
@@ -35,8 +35,8 @@
         {{-- section bodt --}}
         <div class="col-md-10 col-12 d-flex flex-wrap section" style="height:100vh;">
                   <div class="col-12 d-flex flex-row justify-content-end gap-3">
-                      <p class="d-flex mt-2 text-white">{{Auth()->user()->name}}</p>
-                      <a class="bi bi-door-open-fill fs-3" href="{{route('cerrarsesion')}}"></a>                     
+                      <p class="d-flex  text-info fs-3">{{Auth()->user()->name}}</p>
+                      <a class="bi bi-door-open-fill fs-3 text-white" href="{{route('cerrarsesion')}}"></a>                     
                   </div>
                    @yield('content')
         </div>

@@ -11,14 +11,18 @@
     @include('sweetalert::alert')
     <div class="col-12 d-flex justify-content-center section" style="height: 100vh;">
            <div class="card col-6 p-5 m-auto mt-4  ">
-                <form action="{{route('login')}}" method="POST">
+                <form action="{{route('register')}}" method="POST">
                   @csrf
                   <div class="w-100 justify-content-center d-flex text-info">
-                    <h1>Login</h1>
+                    <h1>Register</h1>
                   </div>
                     <div clas s="w-100 justify-content-center d-flex"> 
-                        <label for="exampleFormControlTextarea1" class="form-label">ingrese su correo:</label>
-                        <input class="form-control rounded-5" id="exampleFormControlTextarea1" rows="3" name="email" type="email">
+                        <label for="exampleFormControlTextarea1" class="form-label">ingrese su nombre:</label>
+                        <input class="form-control rounded-5" id="exampleFormControlTextarea1" rows="3"  type="text" name="name">
+                   </div>
+                   <div clas s="w-100 justify-content-center d-flex"> 
+                    <label for="exampleFormControlTextarea1" class="form-label">ingrese su email:</label>
+                    <input class="form-control rounded-5" id="exampleFormControlTextarea1" rows="3"  type="email" name="email">
                    </div>
 
                    <div clas s="w-100 justify-content-center d-flex"> 
@@ -26,12 +30,11 @@
                     <input class="form-control rounded-5" id="exampleFormControlTextarea1" rows="3" name="password" type="password">
                   </div>
                   <div clas s="w-100 justify-content-center d-flex mt-2"> 
-                    <a href="{{route('verRegister')}}" class="d-flex m-auto nav-link text-info">no tienes cuenta? registrate</a>
+                    <a href="{{route('verLogin')}}" class="d-flex m-auto nav-link text-info">Ya tienes cuenta? logeate</a>
                   </div>
                   <div clas s="w-100 justify-content-center d-flex mt-2"> 
                     <button class="btn btn-info w-100 rounded-5 mt-4">Enviar</button>
                   </div>
-
                 </form>
            </div>
     </div>

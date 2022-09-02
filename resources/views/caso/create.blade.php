@@ -1,9 +1,11 @@
 @extends('dashboard')
 @section('content')
-@include('sweetalert::alert')   
-<div clas s="col-12 justify-content-center d-flex p-2"> 
-    <a href="{{route('caso.index')}}" class="btn bi-info text-info fs-1"></a>
+@include('sweetalert::alert')
+@can('rama.index')   
+<div class="col-12 justify-content-center d-flex p-2"> 
+    <a href="{{route('caso.index')}}" class="btn bi-info text-white fs-1"></a>
 </div>
+@endcan
    <div class="w-100 d-flex justify-content-center h-75 aligin-items-center    flex-wrap">
 
                <div class="col-md-4 col-12 d-flex justify-content-center rounded-5 border p-3 shadow-lg bg-white h-100">
@@ -19,7 +21,10 @@
                            </div>
                            <div clas s="w-100 justify-content-center d-flex mt-2"> 
                                <select name="instancia_id" id="" requided class="form-select mt-2">
-                                    <option value="1" selected>Por Procesar</option>
+                                    <option value="" selected>ingrese su instancia</option>
+                                    @foreach ($instancias as $i)
+                                       <option value="{{$i->id_instancia}}">{{$i->estado}}</option>
+                                    @endforeach
                                </select>
                            </div>
 

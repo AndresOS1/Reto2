@@ -74,7 +74,7 @@ class CasoController extends Controller
             $Caso->save();
             if($Caso){
                 Alert::success('Caso creado correctamente');
-                return redirect()->route('caso.index');
+                return redirect()->route('caso.create');
             }else{
                 Alert::error('Error');
                 return redirect()->route('caso.create');
