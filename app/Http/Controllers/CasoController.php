@@ -21,7 +21,7 @@ class CasoController extends Controller
         $casos = Caso::paginate(5);
         $instancias = Instancia::all();
 
-        return view('caso.index', compact('casos','instancia'));
+        return view('caso.index', compact('casos','instancias'));
     }
 
     /**
