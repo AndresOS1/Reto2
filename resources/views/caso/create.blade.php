@@ -1,11 +1,12 @@
 @extends('dashboard')
 @section('content')
 @include('sweetalert::alert')   
-   <div class="w-100 d-flex justify-content-center h-100 aligin-items-center  pt-5 mt-6">
-    <div clas s="w-100 justify-content-center d-flex"> 
-        <a href="" class="btn bi bi-arrow fs-3"></i></a>
-    </div> 
-               <div class="col-md-4 col-12 d-flex justify-content-center rounded-5 border p-3 shadow-lg  h-75">
+<div clas s="col-12 justify-content-center d-flex p-2"> 
+    <a href="{{route('caso.index')}}" class="btn bi-info text-info fs-1"></a>
+</div>
+   <div class="w-100 d-flex justify-content-center h-75 aligin-items-center  pt-5 mt-6 flex-wrap">
+
+               <div class="col-md-4 col-12 d-flex justify-content-center rounded-5 border p-3 shadow-lg  h-100">
                        <form action="{{route('caso.store')}}" method="post" class="">
                            @csrf
                            <div class="w-100 justify-content-center d-flex">
@@ -35,12 +36,13 @@
                            </div>
 
                            <div clas s="w-100 justify-content-center d-flex mt-2"> 
-                               <button class="btn btn-dark w-100 rounded-5 mt-4">Enviar</button>
+                               <button class="btn btn-info w-100 rounded-5 mt-4">Enviar</button>
                            </div>
                            
 
 
                        </form>
                </div>
+
    </div>
 @endsection
