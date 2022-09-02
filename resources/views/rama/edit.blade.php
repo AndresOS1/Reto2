@@ -5,7 +5,7 @@
     <div clas s="w-100 justify-content-center d-flex"> 
         <a href="" class="btn bi bi-arrow fs-3"></i></a>
     </div> 
-               <div class="col-md-4 col-12 d-flex justify-content-center rounded-5 border p-3 shadow-lg  h-75">
+               <div class="col-md-4 col-12 d-flex justify-content-center rounded-5 border p-3 shadow-lg bg-white  h-75">
                        <form action="{{route('actualizarrama',$rama)}}" method="post" class="">
                         @method('PUT')
                            @csrf

@@ -3,7 +3,7 @@
 @include('sweetalert::alert')
         <div class="w-100 d-flex justify-content-center h-100 aligin-items-center">
 
-             <div class="col-9 d-flex m-auto flex-column rounded-5 border p-2 shadow-lg">
+             <div class="col-9 d-flex m-auto flex-column rounded-5 border p-2 shadow-lg bg-white">
                 <div clas s="w-100 justify-content-center d-flex"> 
                     <a href="{{route('rama.create')}}" class="btn bi bi-arrow fs-3 text-info"><i class="bi bi-folder-plus"></i></a>
                 </div>

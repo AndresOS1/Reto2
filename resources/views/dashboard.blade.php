@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Abogados LA LEY</title>
+    <link rel="stylesheet" href="css/home.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
   </head>
@@ -32,9 +33,9 @@
         </div>
 
         {{-- section bodt --}}
-        <div class="col-md-10 col-12 d-flex flex-wrap" style="height:100vh;">
+        <div class="col-md-10 col-12 d-flex flex-wrap section" style="height:100vh;">
                   <div class="col-12 d-flex flex-row justify-content-end gap-3">
-                      <p class="d-flex mt-2">{{Auth()->user()->name}}</p>
+                      <p class="d-flex mt-2 text-white">{{Auth()->user()->name}}</p>
                       <a class="bi bi-door-open-fill fs-3" href="{{route('cerrarsesion')}}"></a>                     
                   </div>
                    @yield('content')

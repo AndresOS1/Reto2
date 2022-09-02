@@ -5,7 +5,7 @@
             <div clas s="w-100 justify-content-center d-flex"> 
                 <a href="{{route('caso.create')}}" class="btn bi bi-arrow fs-3 text-info"><i class="bi bi-folder-plus"></i></a>
             </div>  
-             <div class="col-9 d-flex m-auto mt-5 flex-column rounded-5 border p-2 shadow-lg">
+             <div class="col-9 d-flex m-auto mt-5 flex-column rounded-5 border p-2 shadow-lg bg-white">
                 <form action="{{route('caso.index')}}" method="GET" >
                   @csrf
                   <div  class="input-group w-100 p-3">

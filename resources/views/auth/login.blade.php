@@ -8,6 +8,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
   </head>
   <body>
+    @include('sweetalert::alert')
     <div class="col-12 d-flex justify-content-center section" style="height: 100vh;">
            <div class="card col-6 p-5 m-auto mt-4  ">
                 <form action="{{route('login')}}" method="POST">
@@ -17,12 +18,12 @@
                   </div>
                     <div clas s="w-100 justify-content-center d-flex"> 
                         <label for="exampleFormControlTextarea1" class="form-label">ingrese su correo:</label>
-                        <input class="form-control" id="exampleFormControlTextarea1" rows="3" name="email">
+                        <input class="form-control" id="exampleFormControlTextarea1" rows="3" name="email" type="email">
                    </div>
 
                    <div clas s="w-100 justify-content-center d-flex"> 
                     <label for="exampleFormControlTextarea1" class="form-label">ingrese su contraseña:</label>
-                    <input class="form-control" id="exampleFormControlTextarea1" rows="3" name="password">
+                    <input class="form-control" id="exampleFormControlTextarea1" rows="3" name="password" type="password">
                   </div>
 
                   <div clas s="w-100 justify-content-center d-flex mt-2"> 
